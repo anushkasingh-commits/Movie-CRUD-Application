@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍿 Movies Collection</title>
+    <style>
+        body {
+            background:#181818;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background:#111111;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            text-align: center;
+        }
+        h1 {
+            color:white;
+            margin-bottom: 30px;
+        }
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            background:#E50914;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #c40812;
+        }
+        input {
+            background:#222222;
+            color:white;
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #333333;
+            border-radius: 6px;
+        }
+        input::placeholder{
+            color:#888;
+        }
+        .search-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🎥 Movie Collection</h1>
+
+        <div class="btn-group">
+            <a href="/addMovie">
+                <button>Add Movie</button>
+            </a>
+
+            <a href="/movies">
+                <button>View Movies</button>
+            </a>
+        </div>
+
+        <br><br>
+
+        <form action="/movies/search" method="POST">
+            <input type="text" name="movieName" placeholder="Search Movie">
+
+            <button type="submit">Search</button>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
